@@ -1,0 +1,10 @@
+.contactsContainer {
+  min-height: 80vh;
+  position: relative;
+}
+
+.addContactButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

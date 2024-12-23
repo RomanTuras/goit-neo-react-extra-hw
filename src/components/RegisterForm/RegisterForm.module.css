@@ -1,0 +1,23 @@
+.formLegend {
+  width: 250px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+
+.formField {
+  width: 100%;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+}
