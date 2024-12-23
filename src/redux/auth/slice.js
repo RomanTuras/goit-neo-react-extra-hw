@@ -54,7 +54,7 @@ const slice = createSlice({
         state.isLoggedIn = false;
         state.isRefreshing = false;
         state.isAuthError = false;
-        // TODO: clear local storage
+        localStorage.removeItem('persist:auth');
       })
       .addCase(refreshUser.pending, state => {
         state.isLoggedIn = false;
