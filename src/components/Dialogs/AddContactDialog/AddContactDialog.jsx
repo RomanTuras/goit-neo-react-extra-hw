@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 
-const AddContactDialog = ({contactAdd}) => {
+const AddContactDialog = ({ contactAdd }) => {
   const [open, setOpen] = useState(false);
   const [nameError, setNameError] = useState('');
   const [numberError, setNumberError] = useState('');
@@ -63,7 +63,7 @@ const AddContactDialog = ({contactAdd}) => {
             setNameError('');
             setNumberError('');
             if (isValidate(contact)) {
-              contactAdd(contact)
+              contactAdd(contact);
               handleClose();
             }
           },

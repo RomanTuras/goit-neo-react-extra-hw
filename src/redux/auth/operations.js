@@ -5,13 +5,13 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
-const setToken = (token) => {
-  axios.defaults.headers.common.Authorization = "Bearer " + token;
-}
+const setToken = token => {
+  axios.defaults.headers.common.Authorization = 'Bearer ' + token;
+};
 
 const removeToken = () => {
   delete axios.defaults.headers.common.Authorization;
-}
+};
 
 export const register = createAsyncThunk(
   'auth/register',
@@ -65,11 +65,11 @@ export const refreshUser = createAsyncThunk(
     }
   },
   {
-    condition: (_, {getState}) => {
+    condition: (_, { getState }) => {
       const state = getState();
       const localToken = state.auth.token;
       setToken(localToken);
       return localToken !== null;
-    }
+    },
   }
 );

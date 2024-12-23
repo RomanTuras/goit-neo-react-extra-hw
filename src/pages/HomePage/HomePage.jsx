@@ -15,9 +15,7 @@ const HomePage = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>
-        Greeting in My Contacts App 💁‍♀️
-      </h1>
+      <h1 style={styles.title}>Greeting in My Contacts App 💁‍♀️</h1>
     </div>
   );
 };

@@ -4,8 +4,18 @@ import * as yup from 'yup';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../redux/auth/operations.js';
-import { Box, Button, CircularProgress, Paper, TextField, Typography } from '@mui/material';
-import { selectIsRefreshing, selectIsRegisterError } from '../../redux/auth/selectors.js';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Paper,
+  TextField,
+  Typography,
+} from '@mui/material';
+import {
+  selectIsRefreshing,
+  selectIsRegisterError,
+} from '../../redux/auth/selectors.js';
 import ErrorAuthMessage from '../ErrorAuthMessage/ErrorAuthMessage.jsx';
 
 const initialValues = {
@@ -55,7 +65,7 @@ const RegisterForm = () => {
         validationSchema={RegisterSchema}
       >
         <Form className={css.contactForm}>
-        <Field
+          <Field
             id={nameFieldId}
             as={TextField}
             required
@@ -98,8 +108,9 @@ const RegisterForm = () => {
             className={css.error}
             component="span"
           />
-          {isRegisterError && <ErrorAuthMessage>Registration error!</ErrorAuthMessage>}
-          
+          {isRegisterError && (
+            <ErrorAuthMessage>Registration error!</ErrorAuthMessage>
+          )}
 
           <Box sx={{ m: 1, position: 'relative', margin: '40px auto 0' }}>
             <Button

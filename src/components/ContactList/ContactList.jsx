@@ -6,7 +6,7 @@ import { selectFilterValue } from '../../redux/filters/selectors.js';
 
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
-  const filterValue = useSelector(selectFilterValue)
+  const filterValue = useSelector(selectFilterValue);
 
   return filteredContacts.length > 0 ? (
     <ul className={css.contactList}>
@@ -14,9 +14,9 @@ const ContactList = () => {
         return <Contact key={contact.id} contact={contact} />;
       })}
     </ul>
+  ) : filterValue.length === 0 ? (
+    <p>Add some awesome contact ;)</p>
   ) : (
-    filterValue.length===0 ? 
-    <p>Add some awesome contact ;)</p> :
     <p>No results found ..</p>
   );
 };

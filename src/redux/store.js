@@ -23,7 +23,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  auth: persistReducer(persistConfig, authReducer), 
+  auth: persistReducer(persistConfig, authReducer),
   contacts: contactsReducer,
   filters: filtersReducer,
 });

@@ -1,5 +1,8 @@
 import css from './Contact.module.css';
-import { deleteContact, updateContact } from '../../redux/contacts/operations.js';
+import {
+  deleteContact,
+  updateContact,
+} from '../../redux/contacts/operations.js';
 import { useDispatch } from 'react-redux';
 import { FaUser } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';

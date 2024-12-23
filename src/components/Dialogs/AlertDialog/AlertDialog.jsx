@@ -1,4 +1,4 @@
-import {useState, Fragment} from 'react';
+import { useState, Fragment } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -39,9 +39,7 @@ const AlertDialog = ({ title, message, handleConfirm }) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {title}
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">{title}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             {message}
@@ -51,7 +49,9 @@ const AlertDialog = ({ title, message, handleConfirm }) => {
           <Button onClick={handleClose} autoFocus>
             Cancel
           </Button>
-          <Button onClick={handleOk} color="secondary">Ok</Button>
+          <Button onClick={handleOk} color="secondary">
+            Ok
+          </Button>
         </DialogActions>
       </Dialog>
     </Fragment>

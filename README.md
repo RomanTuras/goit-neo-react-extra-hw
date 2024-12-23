@@ -4,11 +4,11 @@ React working in Vite.
 
 ### Functionality:
 
-Using API from `mockAPI` fetch, search, add, delete contact
+Using API from `goit API` fetch, search, add, delete contact
 
 ### Using
 
-`Redux Toolkit` `React Redux` `axios` `mockAPI` `Provider` `useSelector`
+`Redux Toolkit` `React Redux` `axios` `JSON Web token` `MUI` `Provider` `useSelector`
 `useDispatch` `Formik` `Prettier` `Vite` `Vercel`
 
 ---

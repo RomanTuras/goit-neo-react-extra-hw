@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 
-const EditContactDialog = ({id, name, number, saveChanges}) => {
+const EditContactDialog = ({ id, name, number, saveChanges }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -37,8 +37,8 @@ const EditContactDialog = ({id, name, number, saveChanges}) => {
               id,
               name: formJson.name.trim(),
               number: formJson.number.trim(),
-            }
-            saveChanges(contact)
+            };
+            saveChanges(contact);
             handleClose();
           },
         }}
@@ -71,7 +71,9 @@ const EditContactDialog = ({id, name, number, saveChanges}) => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="secondary">Cancel</Button>
+          <Button onClick={handleClose} color="secondary">
+            Cancel
+          </Button>
           <Button type="submit">Save changes</Button>
         </DialogActions>
       </Dialog>

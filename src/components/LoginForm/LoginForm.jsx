@@ -12,7 +12,10 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { selectIsLoginError, selectIsRefreshing } from '../../redux/auth/selectors.js';
+import {
+  selectIsLoginError,
+  selectIsRefreshing,
+} from '../../redux/auth/selectors.js';
 import ErrorAuthMessage from '../ErrorAuthMessage/ErrorAuthMessage.jsx';
 
 const initialValues = {
@@ -86,8 +89,9 @@ const LoginForm = () => {
             className={css.error}
             component="span"
           />
-          {isLoginError && <ErrorAuthMessage>Pasword or email is incorrect!</ErrorAuthMessage>}
-          
+          {isLoginError && (
+            <ErrorAuthMessage>Pasword or email is incorrect!</ErrorAuthMessage>
+          )}
 
           <Box sx={{ m: 1, position: 'relative', margin: '40px auto 0' }}>
             <Button

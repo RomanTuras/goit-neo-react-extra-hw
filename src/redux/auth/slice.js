@@ -3,22 +3,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { login, logout, refreshUser, register } from './operations.js';
 
-// const handlePending = state => {
-//   state.isRefreshing = true;
-//   state.isError = false;
-//   state.isAuthError = false;
-// };
-
-// const handleRejected = (state, action) => {
-//   state.isRefreshing = false;
-//   state.isError = true;
-//   state.error = action.payload;
-// };
-
-// const handleAuthRejected = (state, action) => {
-//   state.isAuthError = true;
-// }
-
 const slice = createSlice({
   name: 'auth',
   initialState: {
@@ -36,20 +20,20 @@ const slice = createSlice({
   },
   extraReducers: builder => {
     builder
-    .addCase(register.pending, (state) => {
-      state.isRegisterError = false;
-    })  
-    .addCase(register.fulfilled, (state, { payload }) => {
+      .addCase(register.pending, state => {
+        state.isRegisterError = false;
+      })
+      .addCase(register.fulfilled, (state, { payload }) => {
         state.user = payload.user;
         state.token = payload.token;
         state.isLoggedIn = true;
         state.isRefreshing = false;
         state.isRegisterError = false;
       })
-      .addCase(register.rejected, (state) => {
+      .addCase(register.rejected, state => {
         state.isRegisterError = true;
-      }) 
-      .addCase(login.pending, (state) => {
+      })
+      .addCase(login.pending, state => {
         state.isLoginError = false;
       })
       .addCase(login.fulfilled, (state, { payload }) => {
@@ -60,7 +44,7 @@ const slice = createSlice({
         state.isError = false;
         state.isLoginError = false;
       })
-      .addCase(login.rejected, (state) => {
+      .addCase(login.rejected, state => {
         state.isLoginError = true;
       })
       .addCase(logout.fulfilled, state => {
